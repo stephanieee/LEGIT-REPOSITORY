@@ -1539,6 +1539,8 @@ GameObject:
   - 33: {fileID: 75623112}
   - 65: {fileID: 75623111}
   - 23: {fileID: 75623110}
+  - 114: {fileID: 75623113}
+  - 114: {fileID: 75623114}
   m_Layer: 12
   m_Name: block
   m_TagString: Block
@@ -1609,6 +1611,41 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 75623108}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &75623113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75623108}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e882e14fca1e64c844678291f45d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  longShadow: {fileID: 0}
+  longShadowTarget: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  block: {fileID: 0}
+  isPlayerInTrigger: 0
+  speed: 0
+--- !u!114 &75623114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75623108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3a7ee4c8adad545b1bed3ad53c259d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isShadowOn: 0
+  isCubeClicked: 0
+  occupiedGameObject: {fileID: 0}
+  isPlayerOnNSEW: 0
+  shadow: {fileID: 908368550}
 --- !u!1 &76826045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1720,7 @@ Transform:
   m_LocalScale: {x: 1.2064232, y: 0.010053524, z: 1.8096344}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!1 &84559028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,7 +1979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &126166960
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2359,7 +2396,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 138791712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a761fb0f915d3f44994f341922f2db2f, type: 3}
   m_Name: 
@@ -4477,64 +4514,6 @@ Transform:
   - {fileID: 403490543}
   m_Father: {fileID: 168392308}
   m_RootOrder: 0
---- !u!1 &220358532
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 189374, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 220358534}
-  - 23: {fileID: 220358533}
-  m_Layer: 9
-  m_Name: block 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 0
---- !u!23 &220358533
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2322924, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 220358532}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!4 &220358534
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 483284, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 220358532}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 2.89, y: -0.42, z: -0.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 681246857}
-  - {fileID: 2018142341}
-  - {fileID: 485541231}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
 --- !u!1001 &231046306
 Prefab:
   m_ObjectHideFlags: 0
@@ -5232,96 +5211,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 974461093}
   m_RootOrder: 0
---- !u!1 &310481360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 196890, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 310481361}
-  - 33: {fileID: 310481364}
-  - 65: {fileID: 310481363}
-  - 23: {fileID: 310481362}
-  - 114: {fileID: 310481365}
-  m_Layer: 9
-  m_Name: shadow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!4 &310481361
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 464614, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 310481360}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 681246857}
-  m_RootOrder: 3
---- !u!23 &310481362
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2334356, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 310481360}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 019942f2e37620544a1d624914697c40, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &310481363
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6560986, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 310481360}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &310481364
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3392734, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 310481360}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &310481365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 310481360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bbbef57fdae5c64cbac67b81f9f4499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &311342716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5526,7 +5415,7 @@ Transform:
   - {fileID: 942578646}
   - {fileID: 1757947140}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!65 &352428296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5814,7 +5703,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.1, z: 4.179696}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!1 &377105791
 GameObject:
   m_ObjectHideFlags: 0
@@ -5864,7 +5753,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 100, z: 80}
+  m_Size: {x: 50, y: 100, z: 50}
   m_Center: {x: 1, y: 50, z: 10}
 --- !u!54 &377105795
 Rigidbody:
@@ -5912,7 +5801,7 @@ Transform:
   - {fileID: 1086678962}
   - {fileID: 513727076}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!1001 &380965504
 Prefab:
   m_ObjectHideFlags: 0
@@ -6155,84 +6044,6 @@ Transform:
   - {fileID: 2091836968}
   m_Father: {fileID: 1980389825}
   m_RootOrder: 1
---- !u!1 &418380945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 191410, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 418380946}
-  - 33: {fileID: 418380949}
-  - 65: {fileID: 418380948}
-  - 23: {fileID: 418380947}
-  m_Layer: 9
-  m_Name: shadow target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!4 &418380946
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 484860, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 418380945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 681246857}
-  m_RootOrder: 2
---- !u!23 &418380947
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2330864, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 418380945}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &418380948
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6547350, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 418380945}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &418380949
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3302932, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 418380945}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &429581494
 GameObject:
   m_ObjectHideFlags: 0
@@ -6290,7 +6101,7 @@ Transform:
   - {fileID: 231290441}
   - {fileID: 1707197930}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!111 &430245739
 Animation:
   m_ObjectHideFlags: 0
@@ -6672,314 +6483,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 446354, guid: b08b179a5225dbd44a2a11d604dd2f80, type: 2}
   m_PrefabInternal: {fileID: 483963657}
---- !u!1 &485541230
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 129408, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 485541231}
-  - 33: {fileID: 485541235}
-  - 65: {fileID: 485541234}
-  - 23: {fileID: 485541233}
-  - 114: {fileID: 485541232}
-  m_Layer: 0
-  m_Name: click trigger (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!4 &485541231
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 403560, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 485541230}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 220358534}
-  m_RootOrder: 2
---- !u!114 &485541232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11403936, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 485541230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1384774831, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsm:
-    usedInTemplate: {fileID: 0}
-    name: FSM
-    startState: triggers
-    states:
-    - name: triggers
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 62
-        y: 114.984375
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: entered
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: set target
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.TriggerEvent
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: e0558823
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Player
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 00000000656e7465726564
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 07000000120000001700000013000000
-        paramName:
-        - trigger
-        - collideTag
-        - sendEvent
-        - storeCollider
-        paramDataPos: 00000000000000000400000000000000
-        paramByteDataSize: 04000000000000000700000000000000
-    - name: set target
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 82
-        y: 203
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: triggers
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SendEvent
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: eec9d968
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 2018142340}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 73656e64206576656e742032000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1f000000170000000f00000001000000
-        paramName:
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000c00000011000000
-        paramByteDataSize: 000000000c0000000500000001000000
-    events:
-    - name: entered
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: exit
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: left click
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: picked object
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: cancel
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: FINISHED
-      isSystemEvent: 1
-      isGlobal: 0
-    globalTransitions: []
-    variables:
-      floatVariables: []
-      intVariables: []
-      boolVariables:
-      - useVariable: 1
-        name: didpick object
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      stringVariables: []
-      vector2Variables: []
-      vector3Variables: []
-      colorVariables: []
-      rectVariables: []
-      quaternionVariables: []
-      gameObjectVariables:
-      - useVariable: 1
-        name: cube
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {fileID: 0}
-      objectVariables: []
-      materialVariables: []
-      textureVariables: []
-    description: 
-    docUrl: 
-    showStateLabel: 1
-    maxLoopCount: 0
-    watermark: 
-    version: 0
-    ExposedEvents: []
-    RestartOnEnable: 1
-    EnableDebugFlow: 0
-    StepFrame: 0
-    activeStateName: 
-  fsmTemplate: {fileID: 0}
---- !u!23 &485541233
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2369118, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 485541230}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &485541234
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6593170, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 485541230}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &485541235
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3374114, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 485541230}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &509978684
 GameObject:
   m_ObjectHideFlags: 0
@@ -7328,7 +6831,7 @@ Transform:
   m_LocalScale: {x: 1.7346581, y: 0.1, z: 3.6158884}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
 --- !u!1001 &565641789
 Prefab:
   m_ObjectHideFlags: 0
@@ -7513,325 +7016,6 @@ Transform:
   - {fileID: 1943204000}
   m_Father: {fileID: 1562631535}
   m_RootOrder: 0
---- !u!1 &681246856
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 128140, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 681246857}
-  - 114: {fileID: 681246858}
-  m_Layer: 9
-  m_Name: BR
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!4 &681246857
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 427190, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681246856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1, z: 1.2}
-  m_Children:
-  - {fileID: 841145102}
-  - {fileID: 748853083}
-  - {fileID: 418380946}
-  - {fileID: 310481361}
-  m_Father: {fileID: 220358534}
-  m_RootOrder: 0
---- !u!114 &681246858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11409722, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681246856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1384774831, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsm:
-    usedInTemplate: {fileID: 0}
-    name: FSM
-    startState: State 1
-    states:
-    - name: State 1
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 50
-        y: 100
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: set target
-          isSystemEvent: 0
-          isGlobal: 1
-        toState: State 2
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetVisibility
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 8bd50828
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 310481360}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 0000000001
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 14000000110000001100000001000000
-        paramName:
-        - gameObject
-        - toggle
-        - visible
-        - resetOnExit
-        paramDataPos: 00000000000000000200000004000000
-        paramByteDataSize: 00000000020000000200000001000000
-    - name: State 2
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 59
-        y: 181.00781
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: finished
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: State 1
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.iTweenMoveTo
-        - HutongGames.PlayMaker.Actions.iTweenMoveTo
-        - HutongGames.PlayMaker.Actions.SetVisibility
-        customNames:
-        - 
-        - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 000000
-        actionStartIndex: 000000001900000032000000
-        actionHashCodes: f0ad926ef0ad926e8bd50828
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 748853082}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 418380945}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 841145101}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 310481360}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 310481360}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 000000000000000000000000010000803f0000000000000000000001000000001500000000000000010000000000000000000000000001000000000100000000010000000000010000000001000100000000000000000000000000010000803f00000000000000000000010000000015000000000000000000000000000000000000000000010000000001000000000000000000000100000000010001000000010001
-        arrayParamSizes: 00000000000000000000000000000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmGameObject
-        - HutongGames.PlayMaker.FsmVector3
-        - HutongGames.PlayMaker.FsmGameObject
-        - HutongGames.PlayMaker.FsmVector3
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1400000012000000130000001c0000000f0000000f0000000f00000007000000070000000700000011000000130000001c0000000f00000007000000110000000f0000000c0000000c0000001100000017000000170000001100000011000000110000001400000012000000130000001c0000000f0000000f0000000f00000007000000070000000700000011000000130000001c0000000f00000007000000110000000f0000000c0000000c00000011000000170000001700000011000000110000001100000014000000110000001100000001000000
-        paramName:
-        - gameObject
-        - id
-        - transformPosition
-        - vectorPosition
-        - time
-        - delay
-        - speed
-        - space
-        - easeType
-        - loopType
-        - orientToPath
-        - lookAtObject
-        - lookAtVector
-        - lookTime
-        - axis
-        - moveToPath
-        - lookAhead
-        - transforms
-        - vectors
-        - reverse
-        - startEvent
-        - finishEvent
-        - realTime
-        - stopOnExit
-        - loopDontFinish
-        - gameObject
-        - id
-        - transformPosition
-        - vectorPosition
-        - time
-        - delay
-        - speed
-        - space
-        - easeType
-        - loopType
-        - orientToPath
-        - lookAtObject
-        - lookAtVector
-        - lookTime
-        - axis
-        - moveToPath
-        - lookAhead
-        - transforms
-        - vectors
-        - reverse
-        - startEvent
-        - finishEvent
-        - realTime
-        - stopOnExit
-        - loopDontFinish
-        - gameObject
-        - toggle
-        - visible
-        - resetOnExit
-        paramDataPos: 000000000000000000000000000000000d00000012000000170000001c000000200000002400000028000000010000002a000000370000003c00000040000000420000000000000001000000470000004900000049000000490000004b0000004d0000000100000001000000020000004f0000005c00000061000000660000006b0000006f00000073000000770000000300000079000000860000008b0000008f000000910000000200000003000000960000009800000098000000980000009a0000009c000000020000009e000000a0000000a2000000
-        paramByteDataSize: 0000000000000000000000000d00000005000000050000000500000004000000040000000400000002000000000000000d0000000500000004000000020000000500000000000000000000000200000000000000000000000200000002000000020000000000000000000000000000000d00000005000000050000000500000004000000040000000400000002000000000000000d00000005000000040000000200000005000000000000000000000002000000000000000000000002000000020000000200000000000000020000000200000001000000
-    events:
-    - name: finished
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: set target
-      isSystemEvent: 0
-      isGlobal: 1
-    globalTransitions: []
-    variables:
-      floatVariables: []
-      intVariables: []
-      boolVariables: []
-      stringVariables: []
-      vector2Variables: []
-      vector3Variables: []
-      colorVariables: []
-      rectVariables: []
-      quaternionVariables: []
-      gameObjectVariables: []
-      objectVariables: []
-      materialVariables: []
-      textureVariables: []
-    description: 
-    docUrl: 
-    showStateLabel: 1
-    maxLoopCount: 0
-    watermark: 
-    version: 0
-    ExposedEvents: []
-    RestartOnEnable: 1
-    EnableDebugFlow: 0
-    StepFrame: 0
-    activeStateName: 
-  fsmTemplate: {fileID: 0}
 --- !u!1 &692046922
 GameObject:
   m_ObjectHideFlags: 0
@@ -7948,6 +7132,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 567657828}
   m_RootOrder: 0
+--- !u!1 &706667879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 706667883}
+  - 33: {fileID: 706667882}
+  - 65: {fileID: 706667881}
+  - 23: {fileID: 706667880}
+  m_Layer: 12
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &706667880
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706667879}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: adceb816ddffbb0488b6b94d13aa9b6c, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &706667881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706667879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &706667882
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706667879}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &706667883
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706667879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.4, y: 0.45, z: -0.02}
+  m_LocalScale: {x: 11, y: 0.1, z: 1.1999998}
+  m_Children: []
+  m_Father: {fileID: 1672608553}
+  m_RootOrder: 9
 --- !u!1 &729994410
 GameObject:
   m_ObjectHideFlags: 0
@@ -8421,48 +7680,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1025335719}
   m_RootOrder: 1
---- !u!1 &748853082
+--- !u!1 &745973976
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 191488, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 748853083}
-  - 33: {fileID: 748853086}
-  - 65: {fileID: 748853085}
-  - 23: {fileID: 748853084}
-  m_Layer: 9
-  m_Name: target
+  - 4: {fileID: 745973977}
+  - 33: {fileID: 745973980}
+  - 65: {fileID: 745973979}
+  - 23: {fileID: 745973978}
+  m_Layer: 12
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &748853083
+--- !u!4 &745973977
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 443778, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 748853082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 745973976}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -0.08, y: 0.45, z: 2.72}
+  m_LocalScale: {x: 9, y: 0.1, z: 1.2}
   m_Children: []
-  m_Father: {fileID: 681246857}
-  m_RootOrder: 1
---- !u!23 &748853084
+  m_Father: {fileID: 1672608553}
+  m_RootOrder: 8
+--- !u!23 &745973978
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2398280, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 748853082}
-  m_Enabled: 0
+  m_GameObject: {fileID: 745973976}
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: adceb816ddffbb0488b6b94d13aa9b6c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -8478,26 +7736,24 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &748853085
+--- !u!65 &745973979
 BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6531138, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 748853082}
+  m_GameObject: {fileID: 745973976}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &748853086
+--- !u!33 &745973980
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3316784, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 748853082}
+  m_GameObject: {fileID: 745973976}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &755985354
 GameObject:
@@ -9632,84 +8888,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 947994099}
   m_RootOrder: 1
---- !u!1 &841145101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 197628, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 841145102}
-  - 33: {fileID: 841145105}
-  - 65: {fileID: 841145104}
-  - 23: {fileID: 841145103}
-  m_Layer: 9
-  m_Name: block
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!4 &841145102
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 426820, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841145101}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 681246857}
-  m_RootOrder: 0
---- !u!23 &841145103
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2355858, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841145101}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &841145104
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6541792, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841145101}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &841145105
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3326184, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841145101}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &845343097
 GameObject:
   m_ObjectHideFlags: 0
@@ -9963,11 +9141,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longShadow: {fileID: 1167818373}
   longShadowTarget: {fileID: 1097707473}
+  spotHUD: {fileID: 745973976}
   layerMask:
     serializedVersion: 2
     m_Bits: 4294965247
+  block: {fileID: 75623108}
   isPlayerInTrigger: 0
+  isPlayerInPlace: 0
   speed: 5
+  myCube: {fileID: 75623114}
 --- !u!65 &908368551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10132,7 +9314,7 @@ Transform:
   m_LocalScale: {x: 8.749228, y: 1.0587869, z: 3.3427074}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!114 &917583869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10323,7 +9505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.1, z: 1.3531717}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!1 &932309295
 GameObject:
   m_ObjectHideFlags: 0
@@ -10747,7 +9929,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
 --- !u!1 &947994098
 GameObject:
   m_ObjectHideFlags: 0
@@ -10959,7 +10141,7 @@ Transform:
   - {fileID: 300728035}
   - {fileID: 1273941070}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!111 &974461094
 Animation:
   m_ObjectHideFlags: 0
@@ -11486,7 +10668,7 @@ Transform:
   - {fileID: 692046923}
   - {fileID: 86836087}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!95 &1096482908
 Animator:
   serializedVersion: 3
@@ -11659,7 +10841,7 @@ Transform:
   m_LocalScale: {x: 5.5, y: 0.1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!1 &1147102742
 GameObject:
   m_ObjectHideFlags: 0
@@ -12956,7 +12138,7 @@ Transform:
   m_LocalScale: {x: 2.5039232, y: 0.1, z: 1.3531717}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
 --- !u!1 &1332942657
 GameObject:
   m_ObjectHideFlags: 0
@@ -13430,7 +12612,7 @@ Transform:
   m_LocalScale: {x: 11.98, y: 1, z: 17.90115}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &1472662045
 GameObject:
   m_ObjectHideFlags: 0
@@ -13458,7 +12640,7 @@ Transform:
   m_Children:
   - {fileID: 330417308}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1001 &1472896241
 Prefab:
   m_ObjectHideFlags: 0
@@ -13607,6 +12789,81 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 446354, guid: b08b179a5225dbd44a2a11d604dd2f80, type: 2}
   m_PrefabInternal: {fileID: 1478089461}
+--- !u!1 &1494511598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1494511602}
+  - 33: {fileID: 1494511601}
+  - 65: {fileID: 1494511600}
+  - 23: {fileID: 1494511599}
+  m_Layer: 12
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1494511599
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494511598}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: adceb816ddffbb0488b6b94d13aa9b6c, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1494511600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494511598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1494511601
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494511598}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1494511602
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494511598}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -0.08, y: 0.45, z: -2.71}
+  m_LocalScale: {x: 9, y: 0.1, z: 1.1999998}
+  m_Children: []
+  m_Father: {fileID: 1672608553}
+  m_RootOrder: 10
 --- !u!1 &1504460772
 GameObject:
   m_ObjectHideFlags: 0
@@ -13636,7 +12893,7 @@ Transform:
   - {fileID: 1996344258}
   - {fileID: 2047547469}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!111 &1504460774
 Animation:
   m_ObjectHideFlags: 0
@@ -14421,7 +13678,7 @@ Transform:
   - {fileID: 252015191}
   - {fileID: 209515374}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 27
 --- !u!1 &1616508158
 GameObject:
   m_ObjectHideFlags: 0
@@ -14615,8 +13872,11 @@ Transform:
   - {fileID: 354056363}
   - {fileID: 2138266048}
   - {fileID: 1755031429}
+  - {fileID: 745973977}
+  - {fileID: 706667883}
+  - {fileID: 1494511602}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!114 &1672608554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14636,8 +13896,6 @@ MonoBehaviour:
     m_Bits: 4096
   isPlayerInTrigger: 0
   enabled: 0
-  longShadow: {fileID: 1167818373}
-  longShadowTarget: {fileID: 1097707473}
 --- !u!65 &1672608555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15480,11 +14738,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longShadow: {fileID: 354056363}
   longShadowTarget: {fileID: 1860552482}
+  spotHUD: {fileID: 1494511598}
   layerMask:
     serializedVersion: 2
     m_Bits: 4294965247
+  block: {fileID: 75623108}
   isPlayerInTrigger: 0
+  isPlayerInPlace: 0
   speed: 5
+  myCube: {fileID: 75623114}
 --- !u!65 &1778439140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16191,7 +15453,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1983284285}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 1.2, y: -0.31, z: 0}
+  m_LocalPosition: {x: -1.15, y: -0.31, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 75623109}
@@ -16209,11 +15471,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longShadow: {fileID: 2138266048}
   longShadowTarget: {fileID: 1755031429}
+  spotHUD: {fileID: 706667879}
   layerMask:
     serializedVersion: 2
     m_Bits: 4294965247
+  block: {fileID: 75623108}
   isPlayerInTrigger: 0
+  isPlayerInPlace: 0
   speed: 5
+  myCube: {fileID: 75623114}
 --- !u!65 &1983284288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16370,378 +15636,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 446354, guid: b08b179a5225dbd44a2a11d604dd2f80, type: 2}
   m_PrefabInternal: {fileID: 2012304533}
---- !u!1 &2018142340
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 139354, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2018142341}
-  - 114: {fileID: 2018142342}
-  m_Layer: 9
-  m_Name: block input manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!4 &2018142341
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 421020, guid: cfac71cf739ced341ba5d6b746c3a5f2, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2018142340}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 220358534}
-  m_RootOrder: 1
---- !u!114 &2018142342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11478002, guid: cfac71cf739ced341ba5d6b746c3a5f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2018142340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1384774831, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsm:
-    usedInTemplate: {fileID: 0}
-    name: FSM
-    startState: State 1
-    states:
-    - name: wait for input
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 239
-        y: 113.984375
-        width: 109
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: left click
-          isSystemEvent: 0
-          isGlobal: 1
-        toState: left clicked
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetMouseButtonUp
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 2d8b867b
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 000000006c65667420636c69636b0001
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 070000001700000011000000
-        paramName:
-        - button
-        - sendEvent
-        - storeResult
-        paramDataPos: 00000000040000000e000000
-        paramByteDataSize: 040000000a00000002000000
-    - name: left clicked
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 422
-        y: 170.03125
-        width: 108
-        height: 48
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: picked object
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: set target
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: cancel
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: State 1
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.MousePick
-        - HutongGames.PlayMaker.Actions.BoolTest
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 000000000a000000
-        actionHashCodes: 3b448f993334d172
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 0000a0410000016469647069636b206f626a65637400000000000000000000000001000000000000000000000000010000000001090000000000000000016469647069636b206f626a6563747069636b6564206f626a65637463616e63656c00
-        arrayParamSizes: 01000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmInt
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f00000011000000130000001c0000001c0000000f0000000c00000010000000110000000100000011000000170000001700000001000000
-        paramName:
-        - rayDistance
-        - storeDidPickObject
-        - storeGameObject
-        - storePoint
-        - storeNormal
-        - storeDistance
-        - layerMask
-        - 
-        - invertMask
-        - everyFrame
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
-        paramDataPos: 00000000050000000000000015000000220000002f0000000000000034000000390000003b0000003c0000004c000000590000005f000000
-        paramByteDataSize: 0500000010000000000000000d0000000d0000000500000000000000050000000200000001000000100000000d0000000600000001000000
-    - name: set target
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 446
-        y: 265.0078
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: wait for input
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SendEvent
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: eec9d968
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 681246856}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 73657420746172676574000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1f000000170000000f00000001000000
-        paramName:
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000a0000000f000000
-        paramByteDataSize: 000000000a0000000500000001000000
-    - name: State 1
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 55
-        y: 162
-        width: 105
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: send event 2
-          isSystemEvent: 0
-          isGlobal: 1
-        toState: wait for input
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
-    events:
-    - name: FINISHED
-      isSystemEvent: 1
-      isGlobal: 0
-    - name: cancel
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: left click
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: picked object
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: send event 2
-      isSystemEvent: 0
-      isGlobal: 1
-    globalTransitions: []
-    variables:
-      floatVariables: []
-      intVariables: []
-      boolVariables:
-      - useVariable: 1
-        name: didpick object
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      stringVariables: []
-      vector2Variables: []
-      vector3Variables: []
-      colorVariables: []
-      rectVariables: []
-      quaternionVariables: []
-      gameObjectVariables:
-      - useVariable: 1
-        name: cube
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {fileID: 0}
-      objectVariables: []
-      materialVariables: []
-      textureVariables: []
-    description: 
-    docUrl: 
-    showStateLabel: 1
-    maxLoopCount: 0
-    watermark: 
-    version: 0
-    ExposedEvents: []
-    RestartOnEnable: 1
-    EnableDebugFlow: 0
-    StepFrame: 0
-    activeStateName: 
-  fsmTemplate: {fileID: 0}
 --- !u!1 &2023394819
 GameObject:
   m_ObjectHideFlags: 0
